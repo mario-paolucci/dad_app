@@ -20,7 +20,7 @@ development:
   database: dad_app_production
   pool: 5
   username: dad_app
-  password: y4ka8rtu13
+  password: 
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
