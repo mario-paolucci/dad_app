@@ -1,0 +1,53 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= sortable "nome", "Nome" %></th>
+      <th><%= sortable "cognome", "Cognome" %></th>
+      <th><%= sortable "mail", "Email" %></th>
+      <th><%= sortable "tel1", "Telefono" %></th>
+      <th><%= sortable "tel2", "Cellulare" %></th>
+      <th><%= sortable "tel3", "Ufficio" %></th>
+      <th><%= sortable "indirizzo", "Indirizzo" %></th>
+      <th><%= sortable "comune", "Comune" %></th>
+      <th><%= sortable "provincia", "Provincia" %></th>
+      <th><%= sortable "regione", "Regione" %></th>
+      <th><%= sortable "incarico", "Incarico" %></th>
+      <th><%= sortable "seggio", "Seggio" %></th>
+      <th><%= sortable "riferimento", "Riferimento" %></th>
+      <th><%=t '.action', :default => t("helpers.azioni") %></th>
+    </tr>  </thead>
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.nome %></td>
+        <td><%= person.cognome %></td>
+        <td><%= person.mail %></td>
+        <td><%= person.tel1 %></td>
+        <td><%= person.tel2 %></td>
+        <td><%= person.tel3 %></td>
+        <td><%= person.indirizzo %></td>
+        <td><%= person.comune %></td>
+        <td><%= person.provincia %></td>
+        <td><%= person.regione %></td>
+        <td><%= person.incarico %></td>
+        <td><%= person.seggio %></td>
+        <td><%= person.riferimento %></td>
+        <td class="table-actions">
+          <%= link_to t('.edit', :default => t("helpers.links.modifica")),
+                      edit_person_path(person), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.elimina")),
+                      person_path(person),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.conferma", :default => 'Sei sicuro?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div class='paginate-container'>
+<%= will_paginate @person, :previous_label => t("< indietro"), :next_label => t("avanti >") %>
+</div>

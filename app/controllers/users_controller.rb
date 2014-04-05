@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_action :authenticate
 
   # GET /users
   # GET /users.json

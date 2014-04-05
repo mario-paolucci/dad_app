@@ -1,0 +1,86 @@
+<%= form_for @person, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :nome, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nome, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :cognome, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cognome, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :email, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :mail, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :telefono, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tel1, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :cellulare, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tel2, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :ufficio, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tel3, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :indirizzo, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :indirizzo, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :comune, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :comune, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :provincia, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :provincia, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :regione, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :regione, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :incarico, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :incarico, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :seggio, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :seggio, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :riferimento, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :riferimento, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Aggiungi", :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancella")),
+                people_path, :class => 'btn' %>
+  </div>
+<% end %>

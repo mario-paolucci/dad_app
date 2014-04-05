@@ -1,5 +1,5 @@
 $(function() {
-  $(document).on("click","#people th a, #people .pagination a", function() {
+  $("#people th a").on("click", function() {
     $.getScript(this.href);
     return false;
   });

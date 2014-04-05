@@ -1,0 +1,15 @@
+<%- model_class = Person -%>
+<div class="page-header">
+  <h1>Persone</h1>
+</div>
+
+<%= form_tag people_path, :method => 'get', :id => "people_search" do %>
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+  <p>
+    <%= text_field_tag :search, params[:search], {:placeholder => 'eg. Nome, Cognome etc.'} %>
+    <%= submit_tag "Cerca", :name => nil, :class => 'btn', :id => 'cerca-button'%>
+  </p>
+<% end %> 
+
+<div id="people"><%= render 'people' %></div>
