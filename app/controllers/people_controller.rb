@@ -63,12 +63,6 @@ class PeopleController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
-  def authenticate
-    authenticate_or_request_with_http_basic('Administration') do |username, password|
-      username == 'admin' && password == 'password'
-    end
-  end
 
   private
 
