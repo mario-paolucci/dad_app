@@ -11,6 +11,15 @@
  *= require_self
  *= require_tree .
  */
+
+#contatti-header {
+    color: red;
+}
+
+#nav-header {
+    color: lightgray;
+}
+
 th .current {
   padding-right: 12px;
   background-repeat: no-repeat;

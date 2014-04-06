@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= javascript_include_tag "jquery" %>
-     <%= javascript_include_tag "jquery_ujs" %>    
+     <%= javascript_include_tag "jquery" %>
+     <%= javascript_include_tag "jquery_ujs" %>
      <%= javascript_include_tag "application" %>
     <title><%= content_for?(:title) ? yield(:title) : "Comitato Paolucci" %></title>
     <%= csrf_meta_tags %>
@@ -47,7 +47,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <span class="brand">Comitato Paolucci</span>
+          <a href='/people'><span  id="nav-header" class="brand">Comitato Paolucci</span></a>
           <div class="container nav-collapse">
             <ul class="nav">
             <li><%= link_to t('.new', :default => t("helpers.links.Nuovo")),
