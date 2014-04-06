@@ -12,6 +12,14 @@
 
  */
 
+#contatti-header {
+    color: cornflowerblue;
+}
+
+#nav-header {
+    color: lightgray;
+}
+
 th .current {
   padding-right: 12px;
   background-repeat: no-repeat;
