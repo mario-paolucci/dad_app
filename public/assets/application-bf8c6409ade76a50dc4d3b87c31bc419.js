@@ -1,7 +1,3 @@
-//= require jquery
-//= require jquery_ujs
-//= require twitter/bootstrap
-
 $(function() {
   $(document).on("click","#people th a, #people .pagination a", function() {
     $.getScript(this.href);

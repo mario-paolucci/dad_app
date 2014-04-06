@@ -1,8 +1,6 @@
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require twitter/bootstrap
-//= require_tree .
 
 $(function() {
   $(document).on("click","#people th a, #people .pagination a", function() {
