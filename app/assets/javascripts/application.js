@@ -3,7 +3,7 @@
 //= require twitter/bootstrap
 
 $(function() {
-  $(document).on("click","#people th a, #people .pagination a", function() {
+  $(document).on("click","#people p span strong a, #people .pagination a", function() {
     $.getScript(this.href);
     return false;
   });

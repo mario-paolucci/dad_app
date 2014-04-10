@@ -7,7 +7,7 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
-    @people = Person.order(sort_column + " " + sort_direction).search(params[:search]).paginate(:per_page => 2, :page => params[:page])
+    @people = Person.order(sort_column + " " + sort_direction).search(params[:search]).paginate(:per_page => 10, :page => params[:page])
   end
 
   # GET /people/1
@@ -31,7 +31,7 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.save
-        format.html { redirect_to @person, notice: 'Person was successfully created.' }
+        format.html { redirect_to @person, notice: 'Persona creata correttamente.' }
         format.json { render action: 'show', status: :created, location: @person }
       else
         format.html { render action: 'new' }
@@ -45,7 +45,7 @@ class PeopleController < ApplicationController
   def update
     respond_to do |format|
       if @person.update(person_params)
-        format.html { redirect_to @person, notice: 'Person was successfully updated.' }
+        format.html { redirect_to @person, notice: 'Persona modificata correttamente.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -81,6 +81,6 @@ class PeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
-      params.require(:person).permit(:nome, :cognome, :mail, :tel1, :tel2, :tel3, :indirizzo, :comune, :provincia, :regione, :incarico, :seggio, :riferimento)
+      params.require(:person).permit(:nome, :cognome, :mail, :tel1, :tel2, :tel3, :tel4, :indirizzo, :comune, :provincia, :regione, :incarico, :seggio, :riferimento, :priorita, :note)
     end
 end

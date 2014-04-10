@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140404224824) do
+ActiveRecord::Schema.define(version: 20140410195630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,9 @@ ActiveRecord::Schema.define(version: 20140404224824) do
     t.string   "riferimento"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "tel4"
+    t.string   "priorita"
+    t.text     "note"
   end
 
   create_table "users", force: true do |t|

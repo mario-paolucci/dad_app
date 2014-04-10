@@ -30,9 +30,15 @@
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :ufficio, :class => 'control-label' %>
+    <%= f.label :cellulare, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :tel3, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :ufficio, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tel4, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
@@ -77,7 +83,18 @@
       <%= f.text_field :riferimento, :class => 'text_field' %>
     </div>
   </div>
-
+  <div class="control-group">
+    <%= f.label :priorita, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :priorita, :class => 'text_field' %>
+    </div>
+  </div>
+   <div class="control-group">
+    <%= f.label :note, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :note, :class => 'text_area' %>
+    </div>
+  </div>
   <div class="form-actions">
     <%= f.submit "Salva", :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancella")),

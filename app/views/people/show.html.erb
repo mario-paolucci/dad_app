@@ -14,8 +14,10 @@
   <dd><%= @person.tel1 %></dd>
   <dt><strong>Cellulare</strong></dt>
   <dd><%= @person.tel2 %></dd>
-  <dt><strong>Ufficio</strong></dt>
+  <dt><strong>Cellulare</strong></dt>
   <dd><%= @person.tel3 %></dd>
+  <dt><strong>Ufficio</strong></dt>
+  <dd><%= @person.tel4 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:indirizzo) %>:</strong></dt>
   <dd><%= @person.indirizzo %></dd>
   <dt><strong><%= model_class.human_attribute_name(:comune) %>:</strong></dt>
@@ -30,6 +32,10 @@
   <dd><%= @person.seggio %></dd>
   <dt><strong><%= model_class.human_attribute_name(:riferimento) %>:</strong></dt>
   <dd><%= @person.riferimento %></dd>
+   <dt><strong>Priorità</strong></dt>
+  <dd><%= @person.priorita %></dd>
+   <dt><strong>Note</strong></dt>
+  <dd><%= @person.note %></dd>
 </dl>
 
 <div class="form-actions">
